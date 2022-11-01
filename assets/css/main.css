@@ -1,0 +1,124 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-size: 15px;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --darkGray: hsl(0, 0%, 55%);
+  --veryDarkGray: hsl(0, 0%, 41%);
+  --transparent: hsl(0deg 0% 0% / 33%);
+}
+
+@media screen and (max-width: 599px) {
+  section#banner {
+    background-image: url("../img/mobile/image-hero.jpg");
+    background-size: cover;
+    height: 100vh;
+  }
+  section#banner header {
+    padding: 2em 1em;
+  }
+  section#banner header .grid-container {
+    grid-template-columns: 90% 10%;
+  }
+  section#banner #main-menu {
+    display: none;
+  }
+  section#banner #mobile-menu {
+    display: none;
+  }
+  section#banner #mobile-menu .open {
+    background-color: var(--black);
+    height: 100vh;
+  }
+  section#banner #mobile-menu .open ul {
+    margin-top: 200px;
+    margin-left: 50px;
+  }
+  section#banner #mobile-menu .open li {
+    padding-bottom: 1.8em;
+  }
+  section#banner #mobile-menu .open a {
+    color: var(--white);
+    font-size: 1.7rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  section#banner #logo {
+    width: 50%;
+  }
+  section#banner #hamburger {
+    width: 30px;
+    height: auto;
+  }
+  section#banner .keyline-box {
+    margin-top: 22vh;
+  }
+}
+html,
+body {
+  background-color: var(--white);
+}
+
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2.45rem;
+}
+
+p {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+
+section {
+  margin-bottom: 2em;
+  padding: 1em;
+}
+
+.keyline-box {
+  border: 2px solid var(--white);
+  padding: 2em;
+}
+
+.grid-container {
+  display: grid;
+}
+
+#banner {
+  color: var(--white);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
