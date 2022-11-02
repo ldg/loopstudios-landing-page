@@ -5,11 +5,13 @@
 html,
 body {
     background-color: var(--white);
+    color: var(--veryDarkGray);
 }
 h1, h2, h3 {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
+    color: var(--veryDarkGray);
 }
 h1 {
     font-size: 2.45rem;
@@ -17,22 +19,79 @@ h1 {
 p {
     font-family: 'Alata', sans-serif;
     font-weight: 400;
+    line-height: 1.5em;
 }
 section{
-    margin-bottom: 2em;
-    padding: 1em;
+    padding: 0 1em;
 }
 .keyline-box {
     border: 2px solid var(--white);
     padding: 2em;
+    text-align: left;
 }
 .grid-container {
     display: grid;
 }
 #banner {
     color: var(--white);
+    h1 {
+        color: var(--white);
+    }
+}
+
+.card:hover {
+    opacity: .75;
+}
+
+button.btn {
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    letter-spacing: .25em;
+    border: 1px solid var(--black);
+    border-radius: 0;
+    background-color: var(--white);
+    padding: 1em 2em;
+    width: 150px;
+    margin: auto;
+    text-transform: uppercase;
 }
 
 // Footer
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Alata', sans-serif;
+    font-weight: 400;
+    nav a {
+        color: var(--white);
+    }
+
+    ul.social {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1em;
+        width: 200px;
+        margin: auto;
+        li {
+            a {
+                img {
+                    width: 24px;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        color: var(--darkGray);
+    }
+}
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    color: var(--darkGray);
+ }
+.attribution a { 
+    color: var(--darkGray);
+    text-decoration: underline; 
+}

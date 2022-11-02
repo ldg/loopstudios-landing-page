@@ -1,9 +1,13 @@
 //responsive styles
 @media screen and (max-width: 599px) {
+    body {
+        text-align: center;
+    }
     section#banner {
         background-image: url('../img/mobile/image-hero.jpg');
         background-size: cover;
         height: 100vh;
+        margin-bottom: 6em;
 
         header {
             padding: 2em 1em;
@@ -52,9 +56,129 @@
         }
 
         .keyline-box {
-            margin-top: 22vh;
+            margin-top: 16vh;
         }
         
+    }
+
+    #studio-bio {  
+        margin-bottom: 6em; 
+        img {
+            margin-bottom: 2em;
+        }   
+        .content {
+            padding: 0 2.2em;
+            text-align: center;
+            h2 {
+                font-size: 2rem;
+                color: var(--veryDarkGray);
+            }
+            p {
+                margin-top: 1.4em;
+                color: var(--darkGray);
+            }
+        }
+    }
+
+    #portfolio {
+        display: grid;
+        gap: 1em;
+        h2 {
+            font-size: 2.1rem;
+            margin-bottom: 1em;
+        }
+        
+        button {
+            grid-row: 4;
+            margin-bottom: 4em;
+        }
+
+        ul {
+            display: grid;
+            gap: 1em;
+        }
+
+        .card {
+            border: 1px solid grey;
+            height: 150px;
+            padding-top: 4em;
+            padding-left: 1em;
+            p {
+                color: var(--white);
+                font-family: 'Josefin Sans', sans-serif;
+                font-size: 1.8rem;
+                line-height: 1.8rem;
+                text-align: left;
+                text-transform: uppercase;
+                width: 40%;
+            }
+        }
+
+        #deep-earth {
+            background-image: url('../img/mobile/image-deep-earth.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #night-arcade {
+            background-image: url('../img/mobile/image-night-arcade.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #soccer-team {
+            background-image: url('../img/mobile/image-soccer-team.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #the-grid {
+            background-image: url('../img/mobile/image-grid.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #from-above {
+            background-image: url('../img/mobile/image-from-above.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #pocket-borialis {
+            background-image: url('../img/mobile/image-pocket-borealis.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #the-curiosity {
+            background-image: url('../img/mobile/image-curiosity.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #make-fisheye {
+            background-image: url('../img/mobile/image-fisheye.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+    }
+
+    footer {
+        padding-top: 4em;
+        padding-bottom: 2em;
+        section {
+            img {
+                width: 150px;
+                margin-bottom: 2em;
+            }
+            nav li {
+                margin-bottom: 2em;
+            }
+            nav a {
+                text-decoration: none;
+            }
+        }
     }
 }
 

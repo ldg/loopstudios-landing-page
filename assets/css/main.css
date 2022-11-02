@@ -29,10 +29,14 @@ p {
 }
 
 @media screen and (max-width: 599px) {
+  body {
+    text-align: center;
+  }
   section#banner {
     background-image: url("../img/mobile/image-hero.jpg");
     background-size: cover;
     height: 100vh;
+    margin-bottom: 6em;
   }
   section#banner header {
     padding: 2em 1em;
@@ -73,18 +77,123 @@ p {
     height: auto;
   }
   section#banner .keyline-box {
-    margin-top: 22vh;
+    margin-top: 16vh;
+  }
+  #studio-bio {
+    margin-bottom: 6em;
+  }
+  #studio-bio img {
+    margin-bottom: 2em;
+  }
+  #studio-bio .content {
+    padding: 0 2.2em;
+    text-align: center;
+  }
+  #studio-bio .content h2 {
+    font-size: 2rem;
+    color: var(--veryDarkGray);
+  }
+  #studio-bio .content p {
+    margin-top: 1.4em;
+    color: var(--darkGray);
+  }
+  #portfolio {
+    display: grid;
+    gap: 1em;
+  }
+  #portfolio h2 {
+    font-size: 2.1rem;
+    margin-bottom: 1em;
+  }
+  #portfolio button {
+    grid-row: 4;
+    margin-bottom: 4em;
+  }
+  #portfolio ul {
+    display: grid;
+    gap: 1em;
+  }
+  #portfolio .card {
+    border: 1px solid grey;
+    height: 150px;
+    padding-top: 4em;
+    padding-left: 1em;
+  }
+  #portfolio .card p {
+    color: var(--white);
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    text-align: left;
+    text-transform: uppercase;
+    width: 40%;
+  }
+  #portfolio #deep-earth {
+    background-image: url("../img/mobile/image-deep-earth.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #portfolio #night-arcade {
+    background-image: url("../img/mobile/image-night-arcade.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #portfolio #soccer-team {
+    background-image: url("../img/mobile/image-soccer-team.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #portfolio #the-grid {
+    background-image: url("../img/mobile/image-grid.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #portfolio #from-above {
+    background-image: url("../img/mobile/image-from-above.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #portfolio #pocket-borialis {
+    background-image: url("../img/mobile/image-pocket-borealis.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #portfolio #the-curiosity {
+    background-image: url("../img/mobile/image-curiosity.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #portfolio #make-fisheye {
+    background-image: url("../img/mobile/image-fisheye.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  footer {
+    padding-top: 4em;
+    padding-bottom: 2em;
+  }
+  footer section img {
+    width: 150px;
+    margin-bottom: 2em;
+  }
+  footer section nav li {
+    margin-bottom: 2em;
+  }
+  footer section nav a {
+    text-decoration: none;
   }
 }
 html,
 body {
   background-color: var(--white);
+  color: var(--veryDarkGray);
 }
 
 h1, h2, h3 {
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
+  color: var(--veryDarkGray);
 }
 
 h1 {
@@ -94,16 +203,17 @@ h1 {
 p {
   font-family: "Alata", sans-serif;
   font-weight: 400;
+  line-height: 1.5em;
 }
 
 section {
-  margin-bottom: 2em;
-  padding: 1em;
+  padding: 0 1em;
 }
 
 .keyline-box {
   border: 2px solid var(--white);
   padding: 2em;
+  text-align: left;
 }
 
 .grid-container {
@@ -113,12 +223,58 @@ section {
 #banner {
   color: var(--white);
 }
+#banner h1 {
+  color: var(--white);
+}
+
+.card:hover {
+  opacity: 0.75;
+}
+
+button.btn {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  border: 1px solid var(--black);
+  border-radius: 0;
+  background-color: var(--white);
+  padding: 1em 2em;
+  width: 150px;
+  margin: auto;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
+footer nav a {
+  color: var(--white);
+}
+footer ul.social {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+  width: 200px;
+  margin: auto;
+}
+footer ul.social li a img {
+  width: 24px;
+  height: auto;
+}
+footer .copyright {
+  color: var(--darkGray);
+}
 
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: var(--darkGray);
 }
 
 .attribution a {
-  color: hsl(228deg, 45%, 44%);
+  color: var(--darkGray);
+  text-decoration: underline;
 }
