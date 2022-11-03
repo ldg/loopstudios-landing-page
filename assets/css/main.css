@@ -37,6 +37,7 @@ p {
     background-image: url("../img/mobile/image-hero.jpg");
     background-size: cover;
     height: 100vh;
+    overflow: hidden;
     margin-bottom: 6em;
   }
   #banner header {
@@ -50,7 +51,7 @@ p {
     display: none;
   }
   #banner .open {
-    margin-left: 0;
+    margin-left: 0 !important;
   }
   #banner #hamburger {
     display: block;
@@ -217,18 +218,51 @@ p {
   }
   #banner {
     background-image: url("../img/desktop/image-hero.jpg");
-    background-size: cover;
-    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: var(--white);
+    padding: 2em 4em;
+  }
+  #banner header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 2em;
+  }
+  #banner header #main-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    gap: 2em;
+  }
+  #banner header #main-menu ul li a {
+    color: var(--white);
+    font-family: "Alata", sans-serif;
+    text-decoration: none;
+  }
+  #banner header h1 {
     color: var(--white);
   }
-  #banner h1 {
-    color: var(--white);
+  #banner header #logo {
+    width: 250px;
+  }
+  #banner .keyline-box {
+    width: 58%;
+    margin-top: 13vh;
+    padding: 3em;
+  }
+  #banner .keyline-box h1 {
+    font-size: 4.6rem;
   }
 }
 html,
 body {
   background-color: var(--white);
   color: var(--veryDarkGray);
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -256,6 +290,9 @@ section {
   border: 2px solid var(--white);
   padding: 2em;
   text-align: left;
+}
+.keyline-box h1 {
+  color: var(--white);
 }
 
 .grid-container {

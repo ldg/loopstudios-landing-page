@@ -1,4 +1,5 @@
 //responsive styles
+// phones
 @media screen and (max-width: 599px) {
     
     body {
@@ -10,6 +11,7 @@
         background-image: url('../img/mobile/image-hero.jpg');
         background-size: cover;
         height: 100vh;
+        overflow: hidden;
         margin-bottom: 6em;
             header {
                 padding: 2em 1em;
@@ -25,7 +27,7 @@
             
             .open {
                 // transform: translateX(0vw);
-                margin-left: 0;
+                margin-left: 0 !important;
             }
             #hamburger {
                 display: block;
@@ -215,6 +217,7 @@
     }
 }
 
+// tablets - vertical
 @media screen and (min-width: 600px) {
     #mobile-menu,
     #hamburger {
@@ -222,12 +225,59 @@
     }
     #banner {
         background-image: url('../img/desktop/image-hero.jpg');
-        background-size: cover;
-        height: 100vh;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 80vh;
         color: var(--white);
-        h1 {
-            color: var(--white);
+        padding: 2em 4em;
+        header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding-top: 2em;
+                #main-menu {
+                    ul {
+                        display: flex;
+                        justify-content: flex-end;
+                        gap: 2em;
+                        li {
+                            a {
+                                color: var(--white);
+                                font-family: 'Alata', sans-serif;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+                h1 {
+                    color: var(--white);
+                }
+                #logo {
+                    width: 250px;
+                }
         }
+        .keyline-box {
+            width: 58%;
+            margin-top: 13vh;
+            padding: 3em;
+                h1 {
+                    font-size: 4.6rem;
+                }
+        }
+        
     }
 }
 
+// tablets - horizontal
+@media screen and (min-width: 900px) {
+
+}
+
+// desktop
+@media screen and (min-width: 1200px) {
+
+}
+
+// big ass screens
+@media screen and (min-width: 1800px) {
+    
+}
