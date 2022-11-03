@@ -32,12 +32,7 @@ section{
 .grid-container {
     display: grid;
 }
-#banner {
-    color: var(--white);
-    h1 {
-        color: var(--white);
-    }
-}
+
 
 .card:hover {
     opacity: .75;

@@ -1,40 +1,73 @@
 //responsive styles
 @media screen and (max-width: 599px) {
+    
     body {
         text-align: center;
+        position: relative;
     }
-    section#banner {
+    
+    #banner {
         background-image: url('../img/mobile/image-hero.jpg');
         background-size: cover;
         height: 100vh;
         margin-bottom: 6em;
-
-        header {
-            padding: 2em 1em;
-            .grid-container {
-                grid-template-columns: 90% 10%;
+            header {
+                padding: 2em 1em;
+                height: 150px;
+                    .grid-container {
+                        grid-template-columns: 90% 10%;
+                    }
             }
-        }
-
-        #main-menu {
-            display: none;
-        }
+            
+            #main-menu {
+                display: none;
+            }
+            
+            .open {
+                // transform: translateX(0vw);
+                margin-left: 0;
+            }
+            #hamburger {
+                display: block;
+            }
+            #mobile-menu {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                position:absolute;
+                top: 0;
+                left: 0;
+                background-color: var(--black);
+                height: 100vh;
+                width: 100vw;
+                margin-left: 100vw;
+                // transform: translateX(100vw);
+                transition: all .5s;          
+            }
+            
+            #mobile-logo {
+                grid-row:1;
+                width: 60%;
+                margin-top: 2em;
+                margin-left: 2em;
+            }
         
-        #mobile-menu {
-            display: none;
-        }
-
-        #mobile-menu .open {
-            background-color: var(--black);
-            height: 100vh;
-            // margin-top: -35px;
+            #close-button {
+                grid-column: 3;
+                width:24px;
+                height: 24px;
+                margin-top: 2em;
+                margin-right: 2em;
+            }
+            
             ul {
                 margin-top: 200px;
                 margin-left: 50px;
             }
+        
             li {
                 padding-bottom: 1.8em;
             }
+            
             a {
                 color: var(--white);
                 font-size: 1.7rem;
@@ -44,22 +77,22 @@
                 text-transform: uppercase; 
         
             }
-        }
+    
+            #logo {
+                width: 50%;
+            }
+            
+            #hamburger {
+                width: 30px;
+                height: auto;
+            }
+    
+            .keyline-box {
+                margin-top: 16vh;
+            }
 
-        #logo {
-            width: 50%;
-        }
-        
-        #hamburger {
-            width: 30px;
-            height: auto;
-        }
-
-        .keyline-box {
-            margin-top: 16vh;
-        }
-        
     }
+        
 
     #studio-bio {  
         margin-bottom: 6em; 
@@ -178,6 +211,22 @@
             nav a {
                 text-decoration: none;
             }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    #mobile-menu,
+    #hamburger {
+    display: none;
+    }
+    #banner {
+        background-image: url('../img/desktop/image-hero.jpg');
+        background-size: cover;
+        height: 100vh;
+        color: var(--white);
+        h1 {
+            color: var(--white);
         }
     }
 }

@@ -31,37 +31,64 @@ p {
 @media screen and (max-width: 599px) {
   body {
     text-align: center;
+    position: relative;
   }
-  section#banner {
+  #banner {
     background-image: url("../img/mobile/image-hero.jpg");
     background-size: cover;
     height: 100vh;
     margin-bottom: 6em;
   }
-  section#banner header {
+  #banner header {
     padding: 2em 1em;
+    height: 150px;
   }
-  section#banner header .grid-container {
+  #banner header .grid-container {
     grid-template-columns: 90% 10%;
   }
-  section#banner #main-menu {
+  #banner #main-menu {
     display: none;
   }
-  section#banner #mobile-menu {
-    display: none;
+  #banner .open {
+    margin-left: 0;
   }
-  section#banner #mobile-menu .open {
+  #banner #hamburger {
+    display: block;
+  }
+  #banner #mobile-menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: var(--black);
     height: 100vh;
+    width: 100vw;
+    margin-left: 100vw;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
   }
-  section#banner #mobile-menu .open ul {
+  #banner #mobile-logo {
+    grid-row: 1;
+    width: 60%;
+    margin-top: 2em;
+    margin-left: 2em;
+  }
+  #banner #close-button {
+    grid-column: 3;
+    width: 24px;
+    height: 24px;
+    margin-top: 2em;
+    margin-right: 2em;
+  }
+  #banner ul {
     margin-top: 200px;
     margin-left: 50px;
   }
-  section#banner #mobile-menu .open li {
+  #banner li {
     padding-bottom: 1.8em;
   }
-  section#banner #mobile-menu .open a {
+  #banner a {
     color: var(--white);
     font-size: 1.7rem;
     font-family: "Josefin Sans", sans-serif;
@@ -69,14 +96,14 @@ p {
     text-decoration: none;
     text-transform: uppercase;
   }
-  section#banner #logo {
+  #banner #logo {
     width: 50%;
   }
-  section#banner #hamburger {
+  #banner #hamburger {
     width: 30px;
     height: auto;
   }
-  section#banner .keyline-box {
+  #banner .keyline-box {
     margin-top: 16vh;
   }
   #studio-bio {
@@ -183,6 +210,21 @@ p {
     text-decoration: none;
   }
 }
+@media screen and (min-width: 600px) {
+  #mobile-menu,
+#hamburger {
+    display: none;
+  }
+  #banner {
+    background-image: url("../img/desktop/image-hero.jpg");
+    background-size: cover;
+    height: 100vh;
+    color: var(--white);
+  }
+  #banner h1 {
+    color: var(--white);
+  }
+}
 html,
 body {
   background-color: var(--white);
@@ -218,13 +260,6 @@ section {
 
 .grid-container {
   display: grid;
-}
-
-#banner {
-  color: var(--white);
-}
-#banner h1 {
-  color: var(--white);
 }
 
 .card:hover {
