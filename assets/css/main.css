@@ -273,7 +273,7 @@ p {
     padding: 3em;
     grid-column: 3/-1;
     grid-row: 2/1;
-    margin-top: 100px;
+    margin-top: 150px;
   }
   section#portfolio {
     display: grid;
@@ -340,12 +340,90 @@ p {
     background-size: cover;
     height: 300px;
   }
-  section#portfolio footer section {
+  section#portfolio .card {
+    position: relative;
+  }
+  section#portfolio .card p {
+    position: absolute;
+    bottom: 0;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--white);
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 1.2em;
+  }
+  footer {
+    padding-top: 2em;
+    padding-bottom: 1em;
+  }
+  footer section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  section#portfolio footer img#footer-logo {
+  footer img#footer-logo {
     width: 130px;
+  }
+  footer #footer-nav {
+    grid-column: 1/2;
+  }
+  footer #footer-nav ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1em;
+  }
+  footer #footer-nav ul li a {
+    text-decoration: none;
+  }
+  footer .social {
+    grid-column: 3/-1;
+    grid-row: 1/-1;
+  }
+  footer .copyright {
+    grid-column: 3/-1;
+  }
+}
+@media screen and (min-width: 900px) {
+  footer section .attribution {
+    grid-column: 2/-1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #banner,
+#studio-bio,
+#portfolio,
+footer {
+    padding: 4em 8.5em;
+    margin-bottom: 0 !important;
+  }
+  #banner {
+    background-size: contain;
+    background-position: 0 0;
+    height: 80vh;
+  }
+  #banner .keyline-box {
+    margin-top: 21vh;
+    margin-bottom: 0;
+    width: 57%;
+  }
+  #banner .keyline-box h1 {
+    font-size: 4rem;
+  }
+  #studio-bio {
+    margin-bottom: 0;
+  }
+  #studio-bio .content {
+    width: 530px;
+    margin-left: 5em;
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+  #studio-bio .content h2 {
+    font-size: 3rem;
+    margin-top: 2em;
+  }
+  #portfolio h2 {
+    font-size: 3rem !important;
+    padding-top: 0 !important;
   }
 }
 html,

@@ -281,7 +281,7 @@
                 padding: 3em;
                 grid-column: 3/-1;
                 grid-row: 2/1;
-                margin-top: 100px;
+                margin-top: 150px;
             }
     }
 
@@ -349,31 +349,111 @@
                 background-size: cover;
                 height: 300px;
             }
-
-            footer {
-                section {
-                    display: grid;
-                    grid-template-columns: repeat(2,1fr);
-                }
-                img#footer-logo {
-                    width: 130px;
-                }
-                #footer-nav {
-                    
+            .card {
+                position: relative;
+                p {
+                    position: absolute;
+                    bottom: 0;
+                    font-family: 'Josefin Sans', sans-serif;
+                    color: var(--white);
+                    font-size: 2rem;
+                    line-height: 2rem;
+                    padding: 1.2em;
                 }
             }
 
+    }
+
+    footer {
+        padding-top: 2em;
+        padding-bottom: 1em;
+        section {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+        }
+        img#footer-logo {
+            width: 130px;
+        }
+        #footer-nav {
+            grid-column: 1/2;
+            ul {
+                display: grid;
+                grid-template-columns: repeat(5,1fr);
+                gap: 1em;
+                li {
+                    a{
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        .social {
+            grid-column: 3/-1;
+            grid-row: 1/-1
+        }
+        .copyright {
+            grid-column: 3/-1;
+        }
     }
 }
 
 // tablets - horizontal
 @media screen and (min-width: 900px) {
 
+    footer {
+        section {
+            .attribution {
+                grid-column: 2/-1;
+            }
+        }
+    }
+
 }
 
 // desktop
 @media screen and (min-width: 1200px) {
+    #banner,
+    #studio-bio,
+    #portfolio,
+    footer {
+        padding: 4em 8.5em;
+        margin-bottom: 0 !important;
+    }
 
+    #banner {
+        background-size: contain;
+        background-position: 0 0;
+        height: 80vh;
+        .keyline-box {
+            margin-top: 21vh;
+            margin-bottom: 0;
+            width: 57%;
+            h1 {
+                font-size: 4rem;
+            }
+        }
+    }
+
+    #studio-bio {
+        margin-bottom: 0;
+        .content {
+            width: 530px;
+            margin-left: 5em;
+            padding-top: 0;
+            margin-bottom: 0;
+            h2 {
+                font-size: 3rem;
+                margin-top: 2em;
+            }
+        }
+    }
+
+    #portfolio {
+        h2{
+            font-size: 3rem !important;
+            padding-top: 0 !important;
+        }
+    }
 }
 
 // big ass screens
