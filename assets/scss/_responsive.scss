@@ -225,11 +225,13 @@
     }
     #banner {
         background-image: url('../img/desktop/image-hero.jpg');
-        background-size: contain;
+        background-size: cover;
+        background-position: center;
         background-repeat: no-repeat;
-        height: 80vh;
+        height: 90vh;
         color: var(--white);
-        padding: 2em 4em;
+        padding: 4em 2em;
+        margin-bottom: 100px;
         header {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -252,18 +254,115 @@
                     color: var(--white);
                 }
                 #logo {
-                    width: 250px;
+                    width: 130px;
                 }
         }
         .keyline-box {
             width: 58%;
-            margin-top: 13vh;
-            padding: 3em;
+            margin-top: 40vh;
+            padding:    3em;
                 h1 {
-                    font-size: 4.6rem;
+                    font-size: 2.7rem;
                 }
         }
         
+    }
+
+    section#studio-bio {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        margin-bottom: 100px;
+            img {
+                grid-column: 1 / 4;
+                grid-row: 2/1;
+            }
+            .content {
+                background-color: var(--white);
+                padding: 3em;
+                grid-column: 3/-1;
+                grid-row: 2/1;
+                margin-top: 100px;
+            }
+    }
+
+    section#portfolio {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        margin-bottom: 100px;
+            h2 {
+                grid-column: 1/4;
+                font-size: 2rem;
+                padding-top: 2em;
+                padding-bottom: 2em;
+            }
+            ul {
+                grid-column: 1/-1;
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap:1em;
+            }
+            #deep-earth {
+                background-image: url(../img/desktop/image-deep-earth.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 300px;
+            }
+            #night-arcade {
+                background-image: url(../img/desktop/image-night-arcade.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 300px;
+            }
+            #soccer-team {
+                background-image: url(../img/desktop/image-soccer-team.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 300px;
+            }
+            #the-grid {
+                background-image: url(../img/desktop/image-grid.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 300px;
+            }
+            #from-above {
+                background-image: url(../img/desktop/image-from-above.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 300px;
+            }
+            #pocket-borialis {
+                background-image: url(../img/desktop/image-pocket-borealis.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 300px;
+            }
+            #the-curiosity {
+                background-image: url(../img/desktop/image-curiosity.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 300px;
+            }
+            #make-fisheye {
+                background-image: url(../img/desktop/image-fisheye.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 300px;
+            }
+
+            footer {
+                section {
+                    display: grid;
+                    grid-template-columns: repeat(2,1fr);
+                }
+                img#footer-logo {
+                    width: 130px;
+                }
+                #footer-nav {
+                    
+                }
+            }
+
     }
 }
 
