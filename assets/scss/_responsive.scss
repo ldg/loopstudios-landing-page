@@ -458,5 +458,17 @@
 
 // big ass screens
 @media screen and (min-width: 1800px) {
+
+    #banner,
+    #studio-bio,
+    #portfolio,
+    footer {
+        padding: 4em 22.5em;
+    }
+
+    #banner {
+        background-size: cover;
+        height: 100vh;
+    }
     
 }
