@@ -25,7 +25,7 @@ p {
   --black: hsl(0, 0%, 0%);
   --darkGray: hsl(0, 0%, 55%);
   --veryDarkGray: hsl(0, 0%, 41%);
-  --transparent: hsl(0deg 0% 0% / 33%);
+  --transparent: rgba(255, 255, 255, 0.75);
 }
 
 @media screen and (max-width: 599px) {
@@ -147,7 +147,7 @@ p {
     padding-top: 4em;
     padding-left: 1em;
   }
-  #portfolio .card p {
+  #portfolio .card span {
     color: var(--white);
     font-family: "Josefin Sans", sans-serif;
     font-size: 1.8rem;
@@ -199,6 +199,7 @@ p {
   footer {
     padding-top: 4em;
     padding-bottom: 2em;
+    margin-top: 1em;
   }
   footer section img {
     width: 150px;
@@ -343,14 +344,13 @@ p {
   section#portfolio .card {
     position: relative;
   }
-  section#portfolio .card p {
+  section#portfolio .card span {
     position: absolute;
     bottom: 0;
     font-family: "Josefin Sans", sans-serif;
-    color: var(--white);
     font-size: 2rem;
     line-height: 2rem;
-    padding: 1.2em;
+    padding: 6em 1.2em 1.2em 1.2em;
   }
   footer {
     padding-top: 2em;
@@ -421,9 +421,20 @@ footer {
     font-size: 3rem;
     margin-top: 2em;
   }
+  #portfolio ul li .card {
+    height: 490px !important;
+  }
+  #portfolio ul li span {
+    padding: 11em 1.6em 1.2em 1.2em !important;
+    font-size: 2.2rem !important;
+  }
   #portfolio h2 {
     font-size: 3rem !important;
     padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  #portfolio .btn {
+    margin-bottom: 3em;
   }
 }
 @media screen and (min-width: 1800px) {
@@ -479,13 +490,23 @@ section {
   display: grid;
 }
 
-.card:hover {
-  opacity: 0.75;
+.card span {
+  text-transform: uppercase;
+  color: var(--white);
+  width: 100%;
+  height: 100%;
+}
+.card:hover span {
+  background-color: var(--transparent);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  color: var(--black);
 }
 
-button.btn {
+.btn {
   font-family: "Alata", sans-serif;
   font-weight: 400;
+  color: var(--black);
   letter-spacing: 0.25em;
   border: 1px solid var(--black);
   border-radius: 0;
@@ -494,6 +515,13 @@ button.btn {
   width: 150px;
   margin: auto;
   text-transform: uppercase;
+  text-decoration: none;
+}
+.btn:hover {
+  background-color: var(--black);
+  color: var(--white);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 footer {
@@ -518,6 +546,28 @@ footer ul.social li a img {
 }
 footer .copyright {
   color: var(--darkGray);
+  margin-top: 1em;
+}
+
+#main-menu ul li a,
+#footer-nav ul li a {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#main-menu ul li a:hover,
+#footer-nav ul li a:hover {
+  border-bottom: 2px solid var(--white);
+  padding-bottom: 0.5em;
+}
+
+ul.social li a img {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+ul.social li a img:hover {
+  border-bottom: 2px solid var(--white);
+  padding-bottom: 0.25em;
+  margin-top: -0.5em;
 }
 
 .attribution {
@@ -530,4 +580,10 @@ footer .copyright {
 .attribution a {
   color: var(--darkGray);
   text-decoration: underline;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.attribution a:hover {
+  color: var(--white);
+  text-decoration: none;
 }

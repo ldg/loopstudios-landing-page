@@ -138,7 +138,7 @@
             height: 150px;
             padding-top: 4em;
             padding-left: 1em;
-            p {
+            span {
                 color: var(--white);
                 font-family: 'Josefin Sans', sans-serif;
                 font-size: 1.8rem;
@@ -202,6 +202,7 @@
     footer {
         padding-top: 4em;
         padding-bottom: 2em;
+        margin-top: 1em;
         section {
             img {
                 width: 150px;
@@ -351,14 +352,14 @@
             }
             .card {
                 position: relative;
-                p {
+                span {
                     position: absolute;
                     bottom: 0;
                     font-family: 'Josefin Sans', sans-serif;
-                    color: var(--white);
+                    // color: var(--white);
                     font-size: 2rem;
                     line-height: 2rem;
-                    padding: 1.2em;
+                    padding: 6em 1.2em 1.2em 1.2em;
                 }
             }
 
@@ -449,9 +450,25 @@
     }
 
     #portfolio {
+        ul {
+            li {
+                .card {
+                    height: 490px !important;
+                }
+                span {
+                    padding: 11em 1.6em 1.2em 1.2em !important;
+                    font-size: 2.2rem !important;
+                }
+            }
+        }
+       
         h2{
             font-size: 3rem !important;
             padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+        .btn {
+            margin-bottom: 3em;
         }
     }
 }
@@ -469,6 +486,15 @@
     #banner {
         background-size: cover;
         height: 100vh;
+    }
+
+    #portfolio {
+        // h2 {
+        //     padding-bottom: 0 !important;
+        // }
+        // .btn {
+        //     margin-bottom: 3em;
+        // }
     }
     
 }
