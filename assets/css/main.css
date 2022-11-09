@@ -133,7 +133,7 @@ p {
     font-size: 2.1rem;
     margin-bottom: 1em;
   }
-  #portfolio button {
+  #portfolio a.btn {
     grid-row: 4;
     margin-bottom: 4em;
   }
@@ -276,6 +276,10 @@ p {
     grid-row: 2/1;
     margin-top: 150px;
   }
+  section#studio-bio .content h2 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+  }
   section#portfolio {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -348,9 +352,9 @@ p {
     position: absolute;
     bottom: 0;
     font-family: "Josefin Sans", sans-serif;
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 2rem;
-    padding: 6em 1.2em 1.2em 1.2em;
+    padding: 9em 1em 1em 1em;
   }
   footer {
     padding-top: 2em;
@@ -383,6 +387,18 @@ p {
   }
 }
 @media screen and (min-width: 900px) {
+  section#studio-bio .content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5em;
+  }
+  section#portfolio .card span {
+    position: absolute;
+    bottom: 0;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 2rem;
+    line-height: 2rem;
+    padding: 7em 1em 1em 1em;
+  }
   footer section .attribution {
     grid-column: 2/-1;
   }
